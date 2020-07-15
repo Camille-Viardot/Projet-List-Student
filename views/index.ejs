@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student list 2</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+    <form action="/actionStudent" method="POST">
+        <div class="containerStudent">
+            <h1>Student</h1>
+            <ul>
+                <%for(var i = 0 ; i < name.length ; i++) {%>
+
+                <li> <%= name[i] %> </li>
+
+                <% } %>
+
+            </ul>
+            <ul class="nomChoisie">
+                <%
+            for(var i = 0 ; i < subject.length ; i++) {
+            %>
+
+                <li> <%= subject[i].student %> </li>
+
+                <% } %>
+
+            </ul>
+            <input type="text" name="student">
+            <button>YES</button>
+        </div>
+    </form>
+
+    <form action="/actionSujet" method="POST">
+        <div class="containerSujet">
+            <h1>Sujet</h1>
+            <ul class="sujetChoisie">
+
+                <%
+            for(var i = 0 ; i < subject.length ; i++) {
+            %>
+
+                <li> <%=subject[i].Sujet + " " + subject[i].student%> </li>
+
+                <% } %>
+
+            </ul>
+            <input type="text" name="sujet">
+            <button>NO</button>
+        </div>
+    </form>
+
+</body>
+
+</html>

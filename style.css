@@ -1,0 +1,13 @@
+body {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin: auto;
+}
+
+.containerStudent {
+    margin-right: 100px;
+}
+
